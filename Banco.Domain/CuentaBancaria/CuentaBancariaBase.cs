@@ -9,7 +9,7 @@ namespace Banco.Domain.CuentaBancaria
     public abstract class CuentaBancariaBase
     {
 
-        protected List<Movimiento> _movimientos;
+        protected List<MovimientoCuenta> _movimientos;
         public string Numero { get; private set; }
         public string Nombre { get; private set; }
         public string Ciudad { get; private set; }
@@ -20,10 +20,10 @@ namespace Banco.Domain.CuentaBancaria
             Numero = numero;
             Nombre = nombre;
             Ciudad = ciudad;
-            _movimientos = new List<Movimiento>();
+            _movimientos = new List<MovimientoCuenta>();
         }
 
-        public IReadOnlyCollection<Movimiento> Movimientos => _movimientos.AsReadOnly();
+        public IReadOnlyCollection<MovimientoCuenta> Movimientos => _movimientos.AsReadOnly();
 
         public virtual string Consignar(decimal valorConsignacion, DateTime fecha, string ciudad)
         {

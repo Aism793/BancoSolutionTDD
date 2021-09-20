@@ -23,7 +23,7 @@ namespace Banco.Domain
             }
             if (!_movimientos.Any() && valorConsignacion >= 50000 && this.Ciudad.Equals(ciudad))
             {
-                _movimientos.Add(new Movimiento(cuentaBancariaBase: this, fecha: fecha, tipo: "CONSIGNACION", valor: valorConsignacion));
+                _movimientos.Add(new MovimientoCuenta(cuentaBancariaBase: this, fecha: fecha, tipo: "CONSIGNACION", valor: valorConsignacion));
                 Saldo += valorConsignacion;
 
                 return $"Su Nuevo Saldo es de {Saldo} pesos m/c";
@@ -34,14 +34,14 @@ namespace Banco.Domain
             }
             if (_movimientos.Any() && this.Ciudad.Equals(ciudad))
             {
-                _movimientos.Add(new Movimiento(cuentaBancariaBase: this, fecha: fecha, tipo: "CONSIGNACION", valor: valorConsignacion));
+                _movimientos.Add(new MovimientoCuenta(cuentaBancariaBase: this, fecha: fecha, tipo: "CONSIGNACION", valor: valorConsignacion));
                 Saldo += valorConsignacion;
                 return $"Su Nuevo Saldo es de ${Saldo} pesos m/c";
             }
             if (_movimientos.Any() && !this.Ciudad.Equals(ciudad))
             {
                 decimal costoConsignacionNacional = 10000;
-                _movimientos.Add(new Movimiento(cuentaBancariaBase: this, fecha: fecha, tipo: "CONSIGNACION", valor: valorConsignacion));
+                _movimientos.Add(new MovimientoCuenta(cuentaBancariaBase: this, fecha: fecha, tipo: "CONSIGNACION", valor: valorConsignacion));
                 Saldo += (valorConsignacion - costoConsignacionNacional);
                 return $"Su Nuevo Saldo es de ${Saldo} pesos m/c";
             }
@@ -64,7 +64,7 @@ namespace Banco.Domain
             if ((Saldo-valorRetiro)>= 20000 && cantidadRetirosMes <= 3)
             {
                 Saldo -= valorRetiro;
-                _movimientos.Add(new Movimiento(cuentaBancariaBase: this, fecha: fecha, tipo: "RETIRO", valor: valorRetiro));
+                _movimientos.Add(new MovimientoCuenta(cuentaBancariaBase: this, fecha: fecha, tipo: "RETIRO", valor: valorRetiro));
                 return $"Su Nuevo Saldo es de {Saldo} pesos m/c";
             }
 
@@ -77,7 +77,7 @@ namespace Banco.Domain
             {
                 decimal costoRetiro = 5000;
                 Saldo = (Saldo - valorRetiro) - costoRetiro;
-                _movimientos.Add(new Movimiento(cuentaBancariaBase: this, fecha: fecha, tipo: "RETIRO", valor: valorRetiro));
+                _movimientos.Add(new MovimientoCuenta(cuentaBancariaBase: this, fecha: fecha, tipo: "RETIRO", valor: valorRetiro));
                 return $"El nuevo saldo de la cuenta es de {Saldo} pesos";
             }
 

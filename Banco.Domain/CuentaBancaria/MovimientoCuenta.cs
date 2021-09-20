@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Banco.Domain
 {
-    public class Movimiento
+    public class MovimientoCuenta
     {
-        public Movimiento(CuentaBancariaBase cuentaBancariaBase, DateTime fecha, string tipo, decimal valor)
+        public MovimientoCuenta(CuentaBancariaBase cuentaBancariaBase, DateTime fecha, string tipo, decimal valor)
         {
             CuentaAhorro = cuentaBancariaBase;
             Fecha = fecha;

@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<coverage line-rate="0.9367" branch-rate="0.775" version="1.9" timestamp="1632151315" lines-covered="370" lines-valid="395" branches-covered="62" branches-valid="80">
+<coverage line-rate="0.9367" branch-rate="0.775" version="1.9" timestamp="1632152468" lines-covered="370" lines-valid="395" branches-covered="62" branches-valid="80">
   <sources>
-    <source>D:\IsmaPCBlanco\Documentos\ISMA\Semestre 2021-2\Diseño dirigido por pruebas\Proyectos\</source>
+    <source>D:\IsmaPCBlanco\Documentos\ISMA\Semestre 2021-2\Diseño dirigido por pruebas\Proyectos\BancoSolution\</source>
     <source>C:\</source>
   </sources>
   <packages>
-    <package name="Banco.Domain" line-rate="0.9573999999999999" branch-rate="0.826" complexity="60">
+    <package name="Banco.Domain" line-rate="0.9591" branch-rate="0.8275" complexity="83">
       <classes>
-        <class name="Banco.Domain.CuentaAhorro" filename="BancoSolutionTest\Banco.Domain\CuentaAhorro.cs" line-rate="0.9615" branch-rate="0.875" complexity="41">
+        <class name="Banco.Domain.CuentaAhorro" filename="Banco.Domain\CuentaAhorro.cs" line-rate="0.9615" branch-rate="0.875" complexity="41">
           <methods>
             <method name="Consignar" signature="(System.Decimal,System.DateTime,System.String)" line-rate="0.96" branch-rate="0.875" complexity="24">
               <lines>
@@ -235,7 +235,7 @@
             <line number="16" hits="10" branch="False" />
           </lines>
         </class>
-        <class name="Banco.Domain.Movimiento" filename="BancoSolutionTest\Banco.Domain\CuentaBancaria\Movimiento.cs" line-rate="1" branch-rate="1" complexity="5">
+        <class name="Banco.Domain.MovimientoCuenta" filename="Banco.Domain\CuentaBancaria\MovimientoCuenta.cs" line-rate="1" branch-rate="1" complexity="5">
           <methods>
             <method name="get_CuentaAhorro" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -283,7 +283,7 @@
             <line number="18" hits="17" branch="False" />
           </lines>
         </class>
-        <class name="Banco.Domain.CuentaCorriente" filename="BancoSolutionTest\Banco.Domain\CuentaCorriente.cs" line-rate="0.9229999999999999" branch-rate="0.5" complexity="4">
+        <class name="Banco.Domain.CuentaCorriente" filename="Banco.Domain\CuentaCorriente.cs" line-rate="0.9229999999999999" branch-rate="0.5" complexity="4">
           <methods>
             <method name="get_Sobregiro" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -335,7 +335,225 @@
             <line number="17" hits="2" branch="False" />
           </lines>
         </class>
-        <class name="Banco.Domain.CuentaBancaria.CuentaBancariaBase" filename="BancoSolutionTest\Banco.Domain\CuentaBancaria\CuentaBancariaBase.cs" line-rate="0.9444" branch-rate="0.5" complexity="10">
+        <class name="Banco.Domain.TarjetaCredito" filename="Banco.Domain\TarjetaCredito.cs" line-rate="0.9523" branch-rate="0.8332999999999999" complexity="18">
+          <methods>
+            <method name="get_Numero" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="6" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Nombre" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="12" hits="6" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Cupo" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="13" hits="22" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Saldo" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="14" hits="13" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Movimientos" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="25" hits="6" branch="False" />
+              </lines>
+            </method>
+            <method name="Consignar" signature="(System.Decimal,System.DateTime)" line-rate="0.9333" branch-rate="0.8332999999999999" complexity="6">
+              <lines>
+                <line number="28" hits="3" branch="False" />
+                <line number="29" hits="3" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="14" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="30" hits="1" branch="False" />
+                <line number="31" hits="1" branch="False" />
+                <line number="34" hits="2" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="42" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="35" hits="1" branch="False" />
+                <line number="36" hits="1" branch="False" />
+                <line number="37" hits="1" branch="False" />
+                <line number="38" hits="1" branch="False" />
+                <line number="39" hits="1" branch="False" />
+                <line number="42" hits="1" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="157" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="43" hits="1" branch="False" />
+                <line number="44" hits="1" branch="False" />
+                <line number="47" hits="0" branch="False" />
+                <line number="48" hits="3" branch="False" />
+              </lines>
+            </method>
+            <method name="Retirar" signature="(System.Decimal,System.DateTime)" line-rate="0.9285" branch-rate="0.8332999999999999" complexity="6">
+              <lines>
+                <line number="51" hits="3" branch="False" />
+                <line number="52" hits="3" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="14" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="53" hits="1" branch="False" />
+                <line number="54" hits="1" branch="False" />
+                <line number="57" hits="2" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="42" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="58" hits="1" branch="False" />
+                <line number="59" hits="1" branch="False" />
+                <line number="60" hits="1" branch="False" />
+                <line number="61" hits="1" branch="False" />
+                <line number="64" hits="1" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="127" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="65" hits="1" branch="False" />
+                <line number="66" hits="1" branch="False" />
+                <line number="69" hits="0" branch="False" />
+                <line number="70" hits="3" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.String,System.String,System.Decimal)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="17" hits="6" branch="False" />
+                <line number="18" hits="6" branch="False" />
+                <line number="19" hits="6" branch="False" />
+                <line number="20" hits="6" branch="False" />
+                <line number="21" hits="6" branch="False" />
+                <line number="22" hits="6" branch="False" />
+                <line number="23" hits="6" branch="False" />
+                <line number="24" hits="6" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="11" hits="6" branch="False" />
+            <line number="12" hits="6" branch="False" />
+            <line number="13" hits="22" branch="False" />
+            <line number="14" hits="13" branch="False" />
+            <line number="25" hits="6" branch="False" />
+            <line number="28" hits="3" branch="False" />
+            <line number="29" hits="3" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="14" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="30" hits="1" branch="False" />
+            <line number="31" hits="1" branch="False" />
+            <line number="34" hits="2" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="42" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="35" hits="1" branch="False" />
+            <line number="36" hits="1" branch="False" />
+            <line number="37" hits="1" branch="False" />
+            <line number="38" hits="1" branch="False" />
+            <line number="39" hits="1" branch="False" />
+            <line number="42" hits="1" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="157" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="43" hits="1" branch="False" />
+            <line number="44" hits="1" branch="False" />
+            <line number="47" hits="0" branch="False" />
+            <line number="48" hits="3" branch="False" />
+            <line number="51" hits="3" branch="False" />
+            <line number="52" hits="3" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="14" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="53" hits="1" branch="False" />
+            <line number="54" hits="1" branch="False" />
+            <line number="57" hits="2" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="42" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="58" hits="1" branch="False" />
+            <line number="59" hits="1" branch="False" />
+            <line number="60" hits="1" branch="False" />
+            <line number="61" hits="1" branch="False" />
+            <line number="64" hits="1" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="127" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="65" hits="1" branch="False" />
+            <line number="66" hits="1" branch="False" />
+            <line number="69" hits="0" branch="False" />
+            <line number="70" hits="3" branch="False" />
+            <line number="17" hits="6" branch="False" />
+            <line number="18" hits="6" branch="False" />
+            <line number="19" hits="6" branch="False" />
+            <line number="20" hits="6" branch="False" />
+            <line number="21" hits="6" branch="False" />
+            <line number="22" hits="6" branch="False" />
+            <line number="23" hits="6" branch="False" />
+            <line number="24" hits="6" branch="False" />
+          </lines>
+        </class>
+        <class name="Banco.Domain.MovimientoTarjeta" filename="Banco.Domain\TarjetaCredito.cs" line-rate="1" branch-rate="1" complexity="5">
+          <methods>
+            <method name="get_TarjetaCredito" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="75" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Fecha" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="76" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Tipo" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="77" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Valor" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="78" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(Banco.Domain.TarjetaCredito,System.DateTime,System.String,System.Decimal)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="79" hits="2" branch="False" />
+                <line number="80" hits="2" branch="False" />
+                <line number="81" hits="2" branch="False" />
+                <line number="82" hits="2" branch="False" />
+                <line number="83" hits="2" branch="False" />
+                <line number="84" hits="2" branch="False" />
+                <line number="85" hits="2" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="75" hits="2" branch="False" />
+            <line number="76" hits="2" branch="False" />
+            <line number="77" hits="2" branch="False" />
+            <line number="78" hits="2" branch="False" />
+            <line number="79" hits="2" branch="False" />
+            <line number="80" hits="2" branch="False" />
+            <line number="81" hits="2" branch="False" />
+            <line number="82" hits="2" branch="False" />
+            <line number="83" hits="2" branch="False" />
+            <line number="84" hits="2" branch="False" />
+            <line number="85" hits="2" branch="False" />
+          </lines>
+        </class>
+        <class name="Banco.Domain.CuentaBancaria.CuentaBancariaBase" filename="Banco.Domain\CuentaBancaria\CuentaBancariaBase.cs" line-rate="0.9444" branch-rate="0.5" complexity="10">
           <methods>
             <method name="get_Numero" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -417,7 +635,7 @@
         </class>
       </classes>
     </package>
-    <package name="Banco.Domain.Test" line-rate="0.9301999999999999" branch-rate="0.7058" complexity="81">
+    <package name="Banco.Domain.Test" line-rate="0.9233" branch-rate="0.6363" complexity="58">
       <classes>
         <class name="AutoGeneratedProgram" filename="Users\USER\.nuget\packages\microsoft.net.test.sdk\16.9.4\build\netcoreapp2.1\Microsoft.NET.Test.Sdk.Program.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
@@ -431,7 +649,7 @@
             <line number="4" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="Banco.Domain.Test.TarjetasCredito.TarjetaCreditoTest" filename="BancoSolution\Banco.Domain.Test\TarjetasCredito\TarjetaCreditoTest.cs" line-rate="1" branch-rate="1" complexity="6">
+        <class name="Banco.Domain.Test.TarjetasCredito.TarjetaCreditoTest" filename="Banco.Domain.Test\TarjetasCredito\TarjetaCreditoTest.cs" line-rate="1" branch-rate="1" complexity="6">
           <methods>
             <method name="NoPuedeHacerConsignacionMenosUno" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -545,225 +763,7 @@
             <line number="179" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="Banco.Domain.Test.TarjetasCredito.TarjetaCredito" filename="BancoSolution\Banco.Domain.Test\TarjetasCredito\TarjetaCreditoTest.cs" line-rate="0.9523" branch-rate="0.8332999999999999" complexity="18">
-          <methods>
-            <method name="get_Numero" signature="()" line-rate="1" branch-rate="1" complexity="1">
-              <lines>
-                <line number="185" hits="6" branch="False" />
-              </lines>
-            </method>
-            <method name="get_Nombre" signature="()" line-rate="1" branch-rate="1" complexity="1">
-              <lines>
-                <line number="186" hits="6" branch="False" />
-              </lines>
-            </method>
-            <method name="get_Cupo" signature="()" line-rate="1" branch-rate="1" complexity="1">
-              <lines>
-                <line number="187" hits="22" branch="False" />
-              </lines>
-            </method>
-            <method name="get_Saldo" signature="()" line-rate="1" branch-rate="1" complexity="1">
-              <lines>
-                <line number="188" hits="13" branch="False" />
-              </lines>
-            </method>
-            <method name="get_Movimientos" signature="()" line-rate="1" branch-rate="1" complexity="1">
-              <lines>
-                <line number="199" hits="6" branch="False" />
-              </lines>
-            </method>
-            <method name="Consignar" signature="(System.Decimal,System.DateTime)" line-rate="0.9333" branch-rate="0.8332999999999999" complexity="6">
-              <lines>
-                <line number="202" hits="3" branch="False" />
-                <line number="203" hits="3" branch="True" condition-coverage="100% (2/2)">
-                  <conditions>
-                    <condition number="14" type="jump" coverage="100%" />
-                  </conditions>
-                </line>
-                <line number="204" hits="1" branch="False" />
-                <line number="205" hits="1" branch="False" />
-                <line number="208" hits="2" branch="True" condition-coverage="100% (2/2)">
-                  <conditions>
-                    <condition number="42" type="jump" coverage="100%" />
-                  </conditions>
-                </line>
-                <line number="209" hits="1" branch="False" />
-                <line number="210" hits="1" branch="False" />
-                <line number="211" hits="1" branch="False" />
-                <line number="212" hits="1" branch="False" />
-                <line number="213" hits="1" branch="False" />
-                <line number="216" hits="1" branch="True" condition-coverage="50% (1/2)">
-                  <conditions>
-                    <condition number="157" type="jump" coverage="50%" />
-                  </conditions>
-                </line>
-                <line number="217" hits="1" branch="False" />
-                <line number="218" hits="1" branch="False" />
-                <line number="221" hits="0" branch="False" />
-                <line number="222" hits="3" branch="False" />
-              </lines>
-            </method>
-            <method name="Retirar" signature="(System.Decimal,System.DateTime)" line-rate="0.9285" branch-rate="0.8332999999999999" complexity="6">
-              <lines>
-                <line number="225" hits="3" branch="False" />
-                <line number="226" hits="3" branch="True" condition-coverage="100% (2/2)">
-                  <conditions>
-                    <condition number="14" type="jump" coverage="100%" />
-                  </conditions>
-                </line>
-                <line number="227" hits="1" branch="False" />
-                <line number="228" hits="1" branch="False" />
-                <line number="231" hits="2" branch="True" condition-coverage="100% (2/2)">
-                  <conditions>
-                    <condition number="42" type="jump" coverage="100%" />
-                  </conditions>
-                </line>
-                <line number="232" hits="1" branch="False" />
-                <line number="233" hits="1" branch="False" />
-                <line number="234" hits="1" branch="False" />
-                <line number="235" hits="1" branch="False" />
-                <line number="238" hits="1" branch="True" condition-coverage="50% (1/2)">
-                  <conditions>
-                    <condition number="127" type="jump" coverage="50%" />
-                  </conditions>
-                </line>
-                <line number="239" hits="1" branch="False" />
-                <line number="240" hits="1" branch="False" />
-                <line number="243" hits="0" branch="False" />
-                <line number="244" hits="3" branch="False" />
-              </lines>
-            </method>
-            <method name=".ctor" signature="(System.String,System.String,System.Decimal)" line-rate="1" branch-rate="1" complexity="1">
-              <lines>
-                <line number="191" hits="6" branch="False" />
-                <line number="192" hits="6" branch="False" />
-                <line number="193" hits="6" branch="False" />
-                <line number="194" hits="6" branch="False" />
-                <line number="195" hits="6" branch="False" />
-                <line number="196" hits="6" branch="False" />
-                <line number="197" hits="6" branch="False" />
-                <line number="198" hits="6" branch="False" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="185" hits="6" branch="False" />
-            <line number="186" hits="6" branch="False" />
-            <line number="187" hits="22" branch="False" />
-            <line number="188" hits="13" branch="False" />
-            <line number="199" hits="6" branch="False" />
-            <line number="202" hits="3" branch="False" />
-            <line number="203" hits="3" branch="True" condition-coverage="100% (2/2)">
-              <conditions>
-                <condition number="14" type="jump" coverage="100%" />
-              </conditions>
-            </line>
-            <line number="204" hits="1" branch="False" />
-            <line number="205" hits="1" branch="False" />
-            <line number="208" hits="2" branch="True" condition-coverage="100% (2/2)">
-              <conditions>
-                <condition number="42" type="jump" coverage="100%" />
-              </conditions>
-            </line>
-            <line number="209" hits="1" branch="False" />
-            <line number="210" hits="1" branch="False" />
-            <line number="211" hits="1" branch="False" />
-            <line number="212" hits="1" branch="False" />
-            <line number="213" hits="1" branch="False" />
-            <line number="216" hits="1" branch="True" condition-coverage="50% (1/2)">
-              <conditions>
-                <condition number="157" type="jump" coverage="50%" />
-              </conditions>
-            </line>
-            <line number="217" hits="1" branch="False" />
-            <line number="218" hits="1" branch="False" />
-            <line number="221" hits="0" branch="False" />
-            <line number="222" hits="3" branch="False" />
-            <line number="225" hits="3" branch="False" />
-            <line number="226" hits="3" branch="True" condition-coverage="100% (2/2)">
-              <conditions>
-                <condition number="14" type="jump" coverage="100%" />
-              </conditions>
-            </line>
-            <line number="227" hits="1" branch="False" />
-            <line number="228" hits="1" branch="False" />
-            <line number="231" hits="2" branch="True" condition-coverage="100% (2/2)">
-              <conditions>
-                <condition number="42" type="jump" coverage="100%" />
-              </conditions>
-            </line>
-            <line number="232" hits="1" branch="False" />
-            <line number="233" hits="1" branch="False" />
-            <line number="234" hits="1" branch="False" />
-            <line number="235" hits="1" branch="False" />
-            <line number="238" hits="1" branch="True" condition-coverage="50% (1/2)">
-              <conditions>
-                <condition number="127" type="jump" coverage="50%" />
-              </conditions>
-            </line>
-            <line number="239" hits="1" branch="False" />
-            <line number="240" hits="1" branch="False" />
-            <line number="243" hits="0" branch="False" />
-            <line number="244" hits="3" branch="False" />
-            <line number="191" hits="6" branch="False" />
-            <line number="192" hits="6" branch="False" />
-            <line number="193" hits="6" branch="False" />
-            <line number="194" hits="6" branch="False" />
-            <line number="195" hits="6" branch="False" />
-            <line number="196" hits="6" branch="False" />
-            <line number="197" hits="6" branch="False" />
-            <line number="198" hits="6" branch="False" />
-          </lines>
-        </class>
-        <class name="Banco.Domain.Test.TarjetasCredito.Movimiento" filename="BancoSolution\Banco.Domain.Test\TarjetasCredito\TarjetaCreditoTest.cs" line-rate="1" branch-rate="1" complexity="5">
-          <methods>
-            <method name="get_TarjetaCredito" signature="()" line-rate="1" branch-rate="1" complexity="1">
-              <lines>
-                <line number="249" hits="2" branch="False" />
-              </lines>
-            </method>
-            <method name="get_Fecha" signature="()" line-rate="1" branch-rate="1" complexity="1">
-              <lines>
-                <line number="250" hits="2" branch="False" />
-              </lines>
-            </method>
-            <method name="get_Tipo" signature="()" line-rate="1" branch-rate="1" complexity="1">
-              <lines>
-                <line number="251" hits="2" branch="False" />
-              </lines>
-            </method>
-            <method name="get_Valor" signature="()" line-rate="1" branch-rate="1" complexity="1">
-              <lines>
-                <line number="252" hits="2" branch="False" />
-              </lines>
-            </method>
-            <method name=".ctor" signature="(Banco.Domain.Test.TarjetasCredito.TarjetaCredito,System.DateTime,System.String,System.Decimal)" line-rate="1" branch-rate="1" complexity="1">
-              <lines>
-                <line number="253" hits="2" branch="False" />
-                <line number="254" hits="2" branch="False" />
-                <line number="255" hits="2" branch="False" />
-                <line number="256" hits="2" branch="False" />
-                <line number="257" hits="2" branch="False" />
-                <line number="258" hits="2" branch="False" />
-                <line number="259" hits="2" branch="False" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="249" hits="2" branch="False" />
-            <line number="250" hits="2" branch="False" />
-            <line number="251" hits="2" branch="False" />
-            <line number="252" hits="2" branch="False" />
-            <line number="253" hits="2" branch="False" />
-            <line number="254" hits="2" branch="False" />
-            <line number="255" hits="2" branch="False" />
-            <line number="256" hits="2" branch="False" />
-            <line number="257" hits="2" branch="False" />
-            <line number="258" hits="2" branch="False" />
-            <line number="259" hits="2" branch="False" />
-          </lines>
-        </class>
-        <class name="Banco.Domain.Test.CuentasCorriente.CuentaCorrienteTest" filename="BancoSolution\Banco.Domain.Test\CuentasCorriente\CuentaCorrienteTest.cs" line-rate="1" branch-rate="1" complexity="2">
+        <class name="Banco.Domain.Test.CuentasCorriente.CuentaCorrienteTest" filename="Banco.Domain.Test\CuentasCorriente\CuentaCorrienteTest.cs" line-rate="1" branch-rate="1" complexity="2">
           <methods>
             <method name="NoPuedoConsignarNoventaMilPesosIniciales" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -807,7 +807,7 @@
             <line number="62" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="Banco.Domain.Test.CuentasAhorro.CuentaAhorroTest" filename="BancoSolution\Banco.Domain.Test\CuentasAhorro\CuentaAhorroTest.cs" line-rate="1" branch-rate="1" complexity="10">
+        <class name="Banco.Domain.Test.CuentasAhorro.CuentaAhorroTest" filename="Banco.Domain.Test\CuentasAhorro\CuentaAhorroTest.cs" line-rate="1" branch-rate="1" complexity="10">
           <methods>
             <method name="NoPuedeConsignarValorDeMenosUno" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -1013,7 +1013,7 @@
             <line number="257" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="Banco.Domain.Test.CDTs.CDTTest" filename="BancoSolution\Banco.Domain.Test\CDTs\CDTTest.cs" line-rate="1" branch-rate="1" complexity="4">
+        <class name="Banco.Domain.Test.CDTs.CDTTest" filename="Banco.Domain.Test\CDTs\CDTTest.cs" line-rate="1" branch-rate="1" complexity="4">
           <methods>
             <method name="NoPuedeConsignarValorDeMenosUnMillon" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -1087,7 +1087,7 @@
             <line number="118" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="Banco.Domain.Test.CDTs.CDT" filename="BancoSolution\Banco.Domain.Test\CDTs\CDTTest.cs" line-rate="0.7534000000000001" branch-rate="0.6363" complexity="30">
+        <class name="Banco.Domain.Test.CDTs.CDT" filename="Banco.Domain.Test\CDTs\CDTTest.cs" line-rate="0.7534000000000001" branch-rate="0.6363" complexity="30">
           <methods>
             <method name="get_Numero" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -1375,7 +1375,7 @@
             <line number="142" hits="4" branch="False" />
           </lines>
         </class>
-        <class name="Banco.Domain.Test.CDTs.Movimiento" filename="BancoSolution\Banco.Domain.Test\CDTs\CDTTest.cs" line-rate="1" branch-rate="1" complexity="5">
+        <class name="Banco.Domain.Test.CDTs.Movimiento" filename="Banco.Domain.Test\CDTs\CDTTest.cs" line-rate="1" branch-rate="1" complexity="5">
           <methods>
             <method name="get_CDT" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>

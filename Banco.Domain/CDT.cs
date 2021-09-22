@@ -57,11 +57,17 @@ namespace Banco.Domain
             if (Math.Round(meses) == CalcularTermino())
             {
                 decimal interes = Convert.ToDecimal(CalcularTasa(this.Termino, this.Tasa)) * Saldo;
-                //Saldo 
-                return $"El interés ganado luego del término definido es { interes }";
+                decimal retiro = Saldo += interes;
+                Saldo = 0;
+                return $"El valor a retirar es { retiro }";
             }
 
-            throw new NotImplementedException();
+            if (Math.Round(meses) < CalcularTermino())
+            {
+                return "No se ha cumplido el término definido para efectuar el retiro";
+            }
+
+                throw new NotImplementedException();
         }
 
         internal int CalcularTermino()
@@ -95,19 +101,19 @@ namespace Banco.Domain
             double te = 0.0;
             if (termino.Equals("Mes"))
             {
-                te = (Math.Pow((1 + tasa), 0.0833333333333333)) - 1;
+                te = Math.Pow(1 + tasa, 0.08333333333333333333333333333333) - 1;
             }
             if (termino.Equals("Trimestre"))
             {
-                te = (Math.Pow((1 + tasa), 0.25)) - 1;
+                te = Math.Pow(1 + tasa, 0.25) - 1;
             }
             if (termino.Equals("Semestre"))
             {
-                te = (Math.Pow((1 + tasa), 0.5)) - 1;
+                te = Math.Pow(1 + tasa, 0.5) - 1;
             }
             if (termino.Equals("Anio"))
             {
-                te = (Math.Pow((1 + tasa), 1)) - 1;
+                te = Math.Pow(1 + tasa, 1) - 1;
             }
             return te;
         }

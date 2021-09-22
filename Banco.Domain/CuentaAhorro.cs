@@ -17,7 +17,7 @@ namespace Banco.Domain
 
         public override string Consignar(decimal valorConsignacion, DateTime fecha, string ciudad)
         {
-            if (valorConsignacion < 0 && this.Ciudad.Equals(ciudad))
+            if (valorConsignacion <= 0 && this.Ciudad.Equals(ciudad))
             {
                 return "El valor a consignar es incorrecto";
             }

@@ -110,11 +110,34 @@ namespace Banco.Domain.Test.CDTs
         [Test]
         public void PuedeRetirarValorCDTCorrecto()
         {
-            var cdt = new CDT(numero: "10001", nombre: "Cuenta Ejemplo", termino: "Semestre", tasa: 0.06, fechaCreacion: new(2020, 2, 1));
+            var cdt = new CDT(numero: "10001", nombre: "Cuenta Ejemplo", termino: "Trimestre", tasa: 0.06, fechaCreacion: new(2020, 2, 1));
             decimal valorConsignacion = 1000000;
             cdt.Consignar(valorConsignacion: valorConsignacion, fecha: new DateTime(2020, 2, 1));
-            string respuesta = cdt.Retirar(fecha: new DateTime(2020, 8, 1));
-            Assert.AreEqual($"El interés ganado luego del término definido es {Convert.ToDecimal((Math.Pow((1 + 0.06), 0.5)) - 1)* valorConsignacion}", respuesta);
+            string respuesta = cdt.Retirar(fecha: new DateTime(2020, 5, 1));
+            Assert.AreEqual($"El valor a retirar es {(Convert.ToDecimal((Math.Pow((1 + 0.06), 0.25)) - 1)* valorConsignacion) + valorConsignacion}", respuesta);
+        }
+
+        /*
+        Escenario: Retiro incorrecto
+        HU 8.
+        Como Usuario quiero el retiro de mi dinero de mi CDT al finalizar el Término establecido para 
+        recuperar el dinero depositado.
+        Criterio de Aceptación:
+        8.1 Los retiros sólo se podrán realizar una vez haya finalizado el término del CDT.
+        //El ejemplo o escenario
+        Dado El cliente tiene un CDT
+        Número 10001, Nombre “Cuenta ejemplo”, Saldo 1000000 al 6%EA
+        Cuando Va a retirar su dinero no ha pasado el término definido
+        Entonces El sistema presentará el mensaje. “No se ha cumplido el término definido para efectuar el retiro”
+         */
+        [Test]
+        public void NoPuedeRetirarValorCDTCorrecto()
+        {
+            var cdt = new CDT(numero: "10001", nombre: "Cuenta Ejemplo", termino: "Trimestre", tasa: 0.06, fechaCreacion: new(2020, 2, 1));
+            decimal valorConsignacion = 1000000;
+            cdt.Consignar(valorConsignacion: valorConsignacion, fecha: new DateTime(2020, 2, 1));
+            string respuesta = cdt.Retirar(fecha: new DateTime(2020, 2, 1));
+            Assert.AreEqual("No se ha cumplido el término definido para efectuar el retiro", respuesta);
         }
 
     }

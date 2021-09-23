@@ -206,3 +206,7 @@ D:\IsmaPCBlanco\Documentos\ISMA\Semestre 2021-2\Diseño dirigido por pruebas\Pro
 D:\IsmaPCBlanco\Documentos\ISMA\Semestre 2021-2\Diseño dirigido por pruebas\Proyectos\BancoSolution\Banco.Domain.Test\obj\Debug\net5.0\ref\Banco.Domain.Test.dll
 D:\IsmaPCBlanco\Documentos\ISMA\Semestre 2021-2\Diseño dirigido por pruebas\Proyectos\BancoSolution\Banco.Domain.Test\obj\Debug\net5.0\Banco.Domain.Test.pdb
 D:\IsmaPCBlanco\Documentos\ISMA\Semestre 2021-2\Diseño dirigido por pruebas\Proyectos\BancoSolution\Banco.Domain.Test\obj\Debug\net5.0\Banco.Domain.Test.genruntimeconfig.cache
+D:\IsmaPCBlanco\Documentos\ISMA\Semestre 2021-2\Diseño dirigido por pruebas\Proyectos\BancoSolution\Banco.Domain.Test\bin\Debug\net5.0\FluentAssertions.dll
+D:\IsmaPCBlanco\Documentos\ISMA\Semestre 2021-2\Diseño dirigido por pruebas\Proyectos\BancoSolution\Banco.Domain.Test\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
+D:\IsmaPCBlanco\Documentos\ISMA\Semestre 2021-2\Diseño dirigido por pruebas\Proyectos\BancoSolution\Banco.Domain.Test\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
+D:\IsmaPCBlanco\Documentos\ISMA\Semestre 2021-2\Diseño dirigido por pruebas\Proyectos\BancoSolution\Banco.Domain.Test\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll

@@ -32,7 +32,7 @@ namespace Banco.Domain.Test.CuentasCorriente
             decimal valorConsignacion = 90000;
             string respuesta = cuentaCorriente.Consignar(valorConsignacion: valorConsignacion, fecha: new DateTime(2020, 2, 1), ciudad: "Valledupar");
             Assert.AreEqual(0, cuentaCorriente.Movimientos.Count);//Criterio general
-            Assert.AreEqual("El valor a consignar es incorrecto", respuesta);
+            Assert.AreEqual("El valor mínimo de la primera consignación debe ser de $50.000 mil pesos. Su nuevo saldo es $0 pesos", respuesta);
         }
 
         /// <summary>

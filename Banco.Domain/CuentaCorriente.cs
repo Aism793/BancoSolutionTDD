@@ -11,7 +11,7 @@ namespace Banco.Domain
     {
         public decimal Sobregiro { get; private set; }
 
-        public CuentaCorriente(string numero, string nombre, string ciudad, decimal sobregiro) : base(numero, nombre, ciudad)
+        public CuentaCorriente(string numero, string nombre, string ciudad, decimal sobregiro) : base(numero, nombre, ciudad, 100000)
         {
             Sobregiro = -sobregiro;
         }
